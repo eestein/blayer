@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blayer.Data", "Blayer.Data\Blayer.Data.csproj", "{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blayer.Domain", "Blayer.Domain\Blayer.Domain.csproj", "{F0913EEC-ACAF-4D57-9329-D0D5761725D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blayer", "Blayer.Data\Blayer.csproj", "{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0913EEC-ACAF-4D57-9329-D0D5761725D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0913EEC-ACAF-4D57-9329-D0D5761725D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0913EEC-ACAF-4D57-9329-D0D5761725D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0913EEC-ACAF-4D57-9329-D0D5761725D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
