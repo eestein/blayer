@@ -61,9 +61,9 @@
     <Compile Include="UpdateTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Blayer.Data\Blayer.csproj">
+    <ProjectReference Include="..\Blayer.Data\Blayer.Data.csproj">
       <Project>{442b9855-e2e0-4ab2-971c-8d08f03b6abd}</Project>
-      <Name>Blayer</Name>
+      <Name>Blayer.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

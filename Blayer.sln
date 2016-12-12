@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blayer", "Blayer.Data\Blayer.csproj", "{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blayer.Data", "Blayer.Data\Blayer.Data.csproj", "{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blayer.Test", "Blayer.Test\Blayer.Test.csproj", "{3437FC0A-A6A0-4433-AA4E-2016AEFCD844}"
 EndProject
