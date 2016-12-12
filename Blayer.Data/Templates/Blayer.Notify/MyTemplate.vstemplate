@@ -1,0 +1,14 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>POCOClassName</DefaultName>
+    <Name>Notify</Name>
+    <Description>Notifications for entities</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$Notify.cs" ReplaceParameters="true">Notify.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

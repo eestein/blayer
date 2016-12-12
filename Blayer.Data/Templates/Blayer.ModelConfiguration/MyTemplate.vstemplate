@@ -1,0 +1,14 @@
+﻿<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <DefaultName>POCOClassName</DefaultName>
+    <Name>Model Configuration</Name>
+    <Description>Model configuration (relationship) for entities</Description>
+    <ProjectType>CSharp</ProjectType>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.png</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$ModelConfiguration.cs" ReplaceParameters="true">ModelConfiguration.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>
