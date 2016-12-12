@@ -4,8 +4,15 @@ using System.Linq;
 
 namespace Blayer.Data
 {
+    /// <summary>
+    /// Base class for defining repositories
+    /// </summary>
     public abstract class RepositoryConfiguration
     {
+        /// <summary>
+        /// Returns all repositories defined in this
+        /// </summary>
+        /// <returns>All repositories here defined</returns>
         public IEnumerable<IRepository> GetRepositories()
         {
             var repositories = GetType().GetProperties()

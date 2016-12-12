@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blayer", "Blayer.Data\Blayer.csproj", "{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blayer.Test", "Blayer.Test\Blayer.Test.csproj", "{3437FC0A-A6A0-4433-AA4E-2016AEFCD844}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{442B9855-E2E0-4AB2-971C-8D08F03B6ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3437FC0A-A6A0-4433-AA4E-2016AEFCD844}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3437FC0A-A6A0-4433-AA4E-2016AEFCD844}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3437FC0A-A6A0-4433-AA4E-2016AEFCD844}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3437FC0A-A6A0-4433-AA4E-2016AEFCD844}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

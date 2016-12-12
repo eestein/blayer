@@ -6,8 +6,14 @@ using Blayer.Data.Utils;
 
 namespace Blayer.Data
 {
+    /// <summary>
+    /// Modified version of the DbContext class
+    /// </summary>
     public class Context : DbContext
     {
+        /// <summary>
+        /// Repositories added to the context
+        /// </summary>
         protected static Dictionary<Type, IRepository> Repositories;
 
         public Context() { }
@@ -18,6 +24,10 @@ namespace Blayer.Data
             Repositories = extRepositories;
         }
 
+        /// <summary>
+        /// Custom model creation to modify data as needed using the IModelConfiguration pattern.
+        /// </summary>
+        /// <param name="modelBuilder">DbModelBuilder</param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             foreach (var entityType in Repositories.Keys)
