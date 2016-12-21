@@ -9,6 +9,6 @@
   </TemplateData>
   <TemplateContent>
     <References />
-    <ProjectItem SubType="Code" TargetFileName="$fileinputname$Repository.cs" ReplaceParameters="true">UserRepository.cs</ProjectItem>
+    <ProjectItem SubType="Code" TargetFileName="$fileinputname$Repository.cs" ReplaceParameters="true">UserRepository.cs_</ProjectItem>
   </TemplateContent>
 </VSTemplate>
