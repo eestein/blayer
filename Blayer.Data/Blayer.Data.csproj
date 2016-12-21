@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Blayer.Data.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
