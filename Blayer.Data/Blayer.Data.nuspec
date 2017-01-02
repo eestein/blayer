@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
+    <id>blayer-data</id>
     <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
+    <title>Blayer.Data</title>
+    <authors>Eros Stein</authors>
+    <owners>Eros Stein</owners>
     <projectUrl>https://github.com/eestein/blayer</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
+    <description>Data access package using the repository pattern.</description>
     <releaseNotes>Starter package.</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>Data access</tags>
