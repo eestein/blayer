@@ -1,3 +1,5 @@
+[![ahoycoders MyGet Build Status](https://www.myget.org/BuildSource/Badge/ahoycoders?identifier=d9e9494f-d9a8-4195-9904-81ce8e3d8a60)](https://www.myget.org/)
+[![NuGet Status](http://nugetstatus.com/Blayer.Data.png)](http://nugetstatus.com/packages/Blayer.Data)
 # blayer.data
 Database abstraction layer using repository pattern
 
