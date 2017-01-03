@@ -1,15 +1,15 @@
 ﻿namespace Blayer.Data.Utils
 {
     /// <summary>
-    /// Classe não genérica para copiar propriedades de uma instância para outra de tipos iguais ou diferentes
+    /// Copy properties from one instance to another
     /// </summary>
     public static class PropertyCopy
     {
         /// <summary>
-        /// Copia as propriedades de mesmo nome de um objeto para outro.
+        /// Copy properties with the same name from one object to another
         /// </summary>
-        /// <param name="source"></param>
-        /// <param name="destination"></param>
+        /// <param name="source">Source object</param>
+        /// <param name="destination">Target object</param>
         public static void CopyValues(object source, object destination)
         {
             var destProperties = destination.GetType().GetProperties();
