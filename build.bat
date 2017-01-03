@@ -14,7 +14,7 @@ if "%nuget%" == "" (
 	set nuget=nuget
 )
 
-%programfiles(x86)%\MSBuild\14.0\Bin\msbuild Blayer.Data\Blayer.Data.csproj /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
+"%programfiles(x86)%\MSBuild\14.0\Bin\msbuild" Blayer.Data\Blayer.Data.csproj /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=diag /nr:false
 
 mkdir Build
 mkdir Build\lib
