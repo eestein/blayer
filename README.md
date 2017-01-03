@@ -1,6 +1,9 @@
 # blayer.data
 Database abstraction layer using repository pattern
 
+## Installation
+Using NuGet `PM> Install-Package Blayer.Data`
+
 ## How to use it
 I'm planning on uploading the library to nuget and creating a project template for a smoother use, but for now this is how it should be done:
 
