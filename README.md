@@ -1,16 +1,13 @@
 [![ahoycoders MyGet Build Status](https://www.myget.org/BuildSource/Badge/ahoycoders?identifier=d9e9494f-d9a8-4195-9904-81ce8e3d8a60)](https://www.myget.org/)
-[![NuGet version](https://badge.fury.io/nu/blayer.data.svg)](https://badge.fury.io/nu/blayer.data)
+[![NuGet version](https://badge.fury.io/nu/blayer.data.png)](https://badge.fury.io/nu/blayer.data)
 # blayer.data
 Database abstraction layer using repository pattern
 
-## Installation
+## How to use it
+### 1. Install Blayer.Data
 Using NuGet `PM> Install-Package Blayer.Data`
 
-## How to use it
-I'm planning on uploading the library to nuget and creating a project template for a smoother use, but for now this is how it should be done:
-
-### 1. Import Blayer's code
-### 2. Create a class library project with the following structure:
+### 2. Create a class library project with the following structure (Usually `Your.Namespace.Domain`):
 
 Folders:
 
