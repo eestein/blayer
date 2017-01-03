@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>blayer-data</id>
+    <id>Blayer.Data</id>
     <version>$version$</version>
     <title>Blayer.Data</title>
     <authors>Eros Stein</authors>
     <owners>Eros Stein</owners>
     <projectUrl>https://github.com/eestein/blayer</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Data access package using the repository pattern.</description>
+    <description>Data access layer using the repository pattern.</description>
     <releaseNotes>Starter package.</releaseNotes>
     <copyright>Copyright 2017</copyright>
-    <tags>Data access</tags>
+    <tags>Data access layer</tags>
   </metadata>
   <files>
     <file src="bin\$configuration$\Blayer.Data.dll" target="lib\net46\" />
