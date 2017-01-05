@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/eestein/blayer</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Data access layer using the repository pattern.</description>
-    <releaseNotes>Starter package.</releaseNotes>
+    <releaseNotes>Changed ObjectParameter to SqlParameter.</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>Data access layer</tags>
   </metadata>

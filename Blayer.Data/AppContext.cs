@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Core.Objects;
 using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Linq.Expressions;
 using Blayer.Data.Utils;
@@ -248,7 +248,7 @@ namespace Blayer.Data
         /// <param name="query">Query to be executed</param>
         /// <param name="parameters">Query parameters</param>
         /// <returns></returns>
-        public IEnumerable<T> ExecuteQuery<T>(string query, params ObjectParameter[] parameters)
+        public IEnumerable<T> ExecuteQuery<T>(string query, params SqlParameter[] parameters)
         {
             return _context.Database.SqlQuery<T>(query, parameters);
         }
