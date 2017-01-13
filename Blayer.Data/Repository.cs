@@ -13,7 +13,7 @@ namespace Blayer.Data
         // Custom DbContext class
         private Context _context;
         // App's context
-        private AppContext _appContext;
+        private BlayerContext _blayerContext;
 
         /// <summary>
         /// Retrieves the entity type related to this repository
@@ -43,18 +43,18 @@ namespace Blayer.Data
         /// Sets the app's context
         /// </summary>
         /// <param name="ctx">AppContext</param>
-        public void SetAppContext(AppContext ctx)
+        public void SetAppContext(BlayerContext ctx)
         {
-            _appContext = ctx;
+            _blayerContext = ctx;
         }
 
         /// <summary>
         /// Retrieves the app's context
         /// </summary>
         /// <returns>AppContext</returns>
-        public AppContext GetAppContext()
+        public BlayerContext GetAppContext()
         {
-            return _appContext;
+            return _blayerContext;
         }
 
         /// <summary>

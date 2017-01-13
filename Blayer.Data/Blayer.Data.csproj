@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppContext.cs" />
+    <Compile Include="BlayerContext.cs" />
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="IAdditionalStep.cs" />

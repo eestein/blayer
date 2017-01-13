@@ -11,7 +11,7 @@ namespace Blayer.Data
         /// Current context
         /// </summary>
         [NotMapped]
-        public AppContext Context { get; set; }
+        public BlayerContext Context { get; set; }
 
         /// <summary>
         /// Whether it is marked for removal

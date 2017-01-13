@@ -9,7 +9,7 @@ using Blayer.Data.Utils;
 
 namespace Blayer.Data
 {
-    public class AppContext : IDisposable
+    public class BlayerContext : IDisposable
     {
         private readonly Context _context;
         private readonly Dictionary<Type, IRepository> _repositories;
@@ -28,7 +28,7 @@ namespace Blayer.Data
         /// Creates a new instance using the informed repositories
         /// </summary>
         /// <param name="repositories">Repositories</param>
-        private AppContext(IEnumerable<IRepository> repositories)
+        private BlayerContext(IEnumerable<IRepository> repositories)
         {
             _skipBeforeSaveList = new List<DbEntityEntry>();
             _originalEntityEntries = new List<LoadedEntity>();
@@ -44,10 +44,11 @@ namespace Blayer.Data
         /// Creates a new instance using repositories from the configuration
         /// </summary>
         /// <param name="config">Repository configuration</param>
-        public AppContext(RepositoryConfiguration config)
-            : this(config.GetRepositories())
+        /// <param name="repositories">Extra repositories to be loaded</param>
+        public BlayerContext(RepositoryConfiguration config, params IRepository[] repositories)
+            : this(config.GetRepositories().Concat(repositories))
         {
-            _context = new Context(_repositories);
+            _context = new Context(_repositories, config.ConnectionString);
 
             ((IObjectContextAdapter)_context).ObjectContext.ObjectMaterialized += (sender, e) =>
             {
@@ -63,30 +64,6 @@ namespace Blayer.Data
             {
                 rep.Value.SetContext(_context);
                 rep.Value.SetAppContext(this);
-            }
-        }
-
-        /// <summary>
-        /// Creates a new instance using two repositories sources
-        /// </summary>
-        /// <param name="config">Repository configuration</param>
-        /// <param name="repositories">Extra repositories to be added</param>
-        [Obsolete("Incomplete, verify how to concat two repositories on the fly")]
-        public AppContext(RepositoryConfiguration config, IEnumerable<IRepository> repositories)
-            : this(config.GetRepositories())
-        {
-            foreach (var rep in config.GetRepositories())
-            {
-                rep.SetContext(_context);
-                rep.SetAppContext(this);
-                _repositories.Add(rep.GetEntityType(), rep);
-            }
-
-            foreach (var rep in repositories)
-            {
-                rep.SetContext(_context);
-                rep.SetAppContext(this);
-                _repositories.Add(rep.GetEntityType(), rep);
             }
         }
 
@@ -174,6 +151,7 @@ namespace Blayer.Data
         /// <param name="entity">Entity's data</param>
         /// <param name="changedProperties">Properties changed</param>
         /// <returns>Entity attached to the context</returns>
+        [Obsolete("Don't use it for now. Weird behavior, wait until fixed. Meanwhile use the approach found here https://github.com/eestein/blayer/wiki/Performing-CRUD-operations#update")]
         public T Update<T>(T entity, string[] changedProperties)
             where T : EntityBase
         {
@@ -214,7 +192,7 @@ namespace Blayer.Data
         #endregion
 
         /// <summary>
-        /// Save the attached entities
+        /// Saves the attached entities
         /// </summary>
         /// <param name="disposeAfter">If true, maintains the entities in memory for further access, else removes context from memory.</param>
         public void Save(bool disposeAfter = true)

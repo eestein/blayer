@@ -18,8 +18,8 @@ namespace Blayer.Data
 
         public Context() { }
 
-        public Context(Dictionary<Type, IRepository> extRepositories)
-            : base("DbConnection")
+        public Context(Dictionary<Type, IRepository> extRepositories, string connectionString)
+            : base(connectionString)
         {
             Repositories = extRepositories;
         }

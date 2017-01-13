@@ -10,6 +10,11 @@ namespace Blayer.Data
     public abstract class RepositoryConfiguration
     {
         /// <summary>
+        /// Name of the connection string
+        /// </summary>
+        public string ConnectionString = "DbConnection";
+
+        /// <summary>
         /// Returns all repositories defined in this
         /// </summary>
         /// <returns>All repositories here defined</returns>

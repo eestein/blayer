@@ -1,0 +1,301 @@
+.TH "Blayer.Data.AppContext" 3 "Sun Jan 8 2017" "Blayer.Data" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Blayer.Data.AppContext
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits IDisposable\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAppContext\fP (\fBRepositoryConfiguration\fP config)"
+.br
+.RI "Creates a new instance using repositories from the configuration "
+.ti -1c
+.RI "\fBAppContext\fP (\fBRepositoryConfiguration\fP config, IEnumerable< \fBIRepository\fP > repositories)"
+.br
+.RI "Creates a new instance using two repositories sources "
+.ti -1c
+.RI "TReturn \fBGetRepository< T, TReturn >\fP ()"
+.br
+.RI "Retrieves a repository casting to a specific type "
+.ti -1c
+.RI "\fBIRepository\fP< T > \fBGetRepository< T >\fP ()"
+.br
+.RI "Retrieves a repository "
+.ti -1c
+.RI "T \fBAdd< T >\fP (T entity)"
+.br
+.RI "Adds a new entity to the context with the provided data "
+.ti -1c
+.RI "T \fBAdd< T >\fP ()"
+.br
+.RI "Adds a new, empty entity to the context "
+.ti -1c
+.RI "T \fBUpdate< T >\fP (T entity, string[] changedProperties)"
+.br
+.RI "Updates an entity "
+.ti -1c
+.RI "void \fBDelete< T >\fP (T entity)"
+.br
+.RI "Marks an entity for removal "
+.ti -1c
+.RI "void \fBDeleteWhere< T >\fP (Expression< Func< T, bool >> where)"
+.br
+.RI "Marks a group of entities for removal "
+.ti -1c
+.RI "void \fBSave\fP (bool disposeAfter=true)"
+.br
+.RI "Save the attached entities "
+.ti -1c
+.RI "void \fBDispose\fP ()"
+.br
+.RI "Removes the context from memory "
+.ti -1c
+.RI "IEnumerable< T > \fBExecuteQuery< T >\fP (string query, params SqlParameter[] parameters)"
+.br
+.RI "Executes a specific query on the database\&. Ex: query = 'SELECT VALUE UDF\&.UserDefinedFunction(@someParameter) FROM \&.\&.\&.' parameters = new ObjectParameter('someParameter', 'some value') "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "object \fBLoggedUser\fP\fC [get, set]\fP"
+.br
+.RI "Logged user "
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Blayer\&.Data\&.AppContext\&.AppContext (\fBRepositoryConfiguration\fP config)"
+
+.PP
+Creates a new instance using repositories from the configuration 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIconfig\fP \fBRepository\fP configuration
+.RE
+.PP
+
+.SS "Blayer\&.Data\&.AppContext\&.AppContext (\fBRepositoryConfiguration\fP config, IEnumerable< \fBIRepository\fP > repositories)"
+
+.PP
+Creates a new instance using two repositories sources 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIconfig\fP \fBRepository\fP configuration
+.br
+\fIrepositories\fP Extra repositories to be added
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "T Blayer\&.Data\&.AppContext\&.Add< T > (T entity)"
+
+.PP
+Adds a new entity to the context with the provided data 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Type of the entity
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIentity\fP Entity's data
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Entity attached to the context
+.RE
+.PP
+
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIEntityBase\fP
+.SS "T Blayer\&.Data\&.AppContext\&.Add< T > ()"
+
+.PP
+Adds a new, empty entity to the context 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Type of the entity
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Entity attached to the context
+.RE
+.PP
+
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIEntityBase\fP
+.SS "void Blayer\&.Data\&.AppContext\&.Delete< T > (T entity)"
+
+.PP
+Marks an entity for removal 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Type of the entity
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIentity\fP Entity's data
+.RE
+.PP
+
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIEntityBase\fP
+.SS "void Blayer\&.Data\&.AppContext\&.DeleteWhere< T > (Expression< Func< T, bool >> where)"
+
+.PP
+Marks a group of entities for removal 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Entity's data
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwhere\fP Expression to filter data to be removed
+.RE
+.PP
+
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIEntityBase\fP
+.SS "void Blayer\&.Data\&.AppContext\&.Dispose ()"
+
+.PP
+Removes the context from memory 
+.SS "IEnumerable<T> Blayer\&.Data\&.AppContext\&.ExecuteQuery< T > (string query, params SqlParameter [] parameters)"
+
+.PP
+Executes a specific query on the database\&. Ex: query = 'SELECT VALUE UDF\&.UserDefinedFunction(@someParameter) FROM \&.\&.\&.' parameters = new ObjectParameter('someParameter', 'some value') 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Return type
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIquery\fP Query to be executed
+.br
+\fIparameters\fP Query parameters
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+.RE
+.PP
+
+.SS "\fBIRepository\fP<T> Blayer\&.Data\&.AppContext\&.GetRepository< T > ()"
+
+.PP
+Retrieves a repository 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP \fBRepository\fP base class type
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBRepository\fP
+.RE
+.PP
+
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIEntityBase\fP
+.SS "TReturn Blayer\&.Data\&.AppContext\&.GetRepository< T, TReturn > ()"
+
+.PP
+Retrieves a repository casting to a specific type 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP \fBRepository\fP base class type
+.br
+\fITReturn\fP \fBRepository\fP type
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+\fBRepository\fP converted to the chosen return type
+.RE
+.PP
+
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIEntityBase\fP
+.TP
+\fITReturn\fP : \fIRepository<T>\fP
+.SS "void Blayer\&.Data\&.AppContext\&.Save (bool disposeAfter = \fCtrue\fP)"
+
+.PP
+Save the attached entities 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdisposeAfter\fP If true, maintains the entities in memory for further access, else removes context from memory\&.
+.RE
+.PP
+
+.SS "T Blayer\&.Data\&.AppContext\&.Update< T > (T entity, string [] changedProperties)"
+
+.PP
+Updates an entity 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Type of the entity
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIentity\fP Entity's data
+.br
+\fIchangedProperties\fP Properties changed
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+Entity attached to the context
+.RE
+.PP
+
+.PP
+\fBType Constraints\fP
+.TP
+\fIT\fP : \fIEntityBase\fP
+.SH "Property Documentation"
+.PP 
+.SS "object Blayer\&.Data\&.AppContext\&.LoggedUser\fC [get]\fP, \fC [set]\fP"
+
+.PP
+Logged user 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Blayer\&.Data from the source code\&.

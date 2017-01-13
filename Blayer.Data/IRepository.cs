@@ -24,13 +24,13 @@ namespace Blayer.Data
         /// Sets the app's context
         /// </summary>
         /// <param name="ctx">AppContext</param>
-        void SetAppContext(AppContext ctx);
+        void SetAppContext(BlayerContext ctx);
 
         /// <summary>
         /// Retrieves the app's context
         /// </summary>
         /// <returns>AppContext</returns>
-        AppContext GetAppContext();
+        BlayerContext GetAppContext();
 
         /// <summary>
         /// Retrieves the entity type related to this repository
