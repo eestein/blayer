@@ -7,28 +7,4 @@ Database abstraction layer using repository pattern
 Using NuGet `PM> Install-Package Blayer.Data`
 
 ## How to use it
-### 1. Create a class library project
-Usually `Your.Namespace.Domain`
-
-### 2. Add Blayer.Data package to this library
-
-### 3. Add the folders below
-
-1. AdditionalSteps
-2. ModelConfiguration
-3. Notifications
-4. Repositories
-5. Validations
-
-### 4. Create a file in the root of the project
-
-A file in the root of the project named `AppConfiguration` (just an example) with the content:
-
-```
-namespace Your.Namespace.Domain
-{
-    public class AppConfiguration : RepositoryConfiguration
-    {
-    }
-}
-```
+Please visit the [Wiki](https://github.com/eestein/blayer/wiki) you'll be able to find all the documentation there.
