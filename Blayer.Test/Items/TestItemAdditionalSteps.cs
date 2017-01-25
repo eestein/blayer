@@ -1,39 +1,41 @@
 using Blayer.Data;
 
-namespace $rootnamespace$
+namespace Blayer.Test.Items
 {
     /// <summary>
-    /// Notifications for entity $fileinputname$
+    /// Additional steps to be executed for the entity TestItem
     /// </summary>
-    public class $fileinputname$Notify : INotify
+    public class TestItemAdditionalSteps : IAdditionalStep
     {
         /// <summary>
-        /// Notifications for $fileinputname$
+        /// Execute additional steps for TestItem
         /// </summary>
         /// <param name="state">Entity's current state</param>
         /// <param name="entityObject">Entity</param>
         /// <param name="originalEntity">Unmodified entity</param>
-        public void Notify(System.Data.Entity.EntityState state, object entityObject, object originalEntity)
+        public void Execute(System.Data.Entity.EntityState state, object entityObject, object originalEntity)
         {
-            $fileinputname$ entity = ($fileinputname$)entityObject;
-            $fileinputname$ dbEntity = originalEntity as $fileinputname$;
+            TestItem entity = (TestItem)entityObject;
+            TestItem dbEntity = originalEntity as TestItem;
             BlayerContext ctx = entity.Context;
 
             switch (state)
             {
-                    // If the entity was added (data creation)
+                // If the entity was added (data creation)
                 case System.Data.Entity.EntityState.Added:
                     {
 
                     }
                     break;
-                    // If the entity was removed (data removal)
+                // If the entity was removed (data removal)
                 case System.Data.Entity.EntityState.Deleted:
                     {
-
+                        // testing logical removal
+                        entity.WillBeDeleted = false;
+                        entity.Name = "Rmoved";
                     }
                     break;
-                    // If the entity was updated (data update)
+                // If the entity was updated (data update)
                 case System.Data.Entity.EntityState.Modified:
                     {
 

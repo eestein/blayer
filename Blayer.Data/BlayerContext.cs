@@ -253,7 +253,6 @@ namespace Blayer.Data
 
                 var repository = keyValuePair.Value;
                 var type = repository.GetEntityType();
-
                 var additionalStep = repository.GetAdditionalStep();
                 var validate = repository.GetValidate();
                 var loadedEntity = new LoadedEntity { Entry = entry };
@@ -266,7 +265,10 @@ namespace Blayer.Data
 
                     DoBeforeSave();
 
-                    repository.InvokeMethod("Delete", entry.Entity);
+                    // If the item was removed virtually or it's just not going to be
+                    // physically removed anymore we skip the database removal.
+                    if (((EntityBase)entry.Entity).WillBeDeleted)
+                        repository.InvokeMethod("Delete", entry.Entity);
                 }
                 else
                 {

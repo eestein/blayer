@@ -17,7 +17,7 @@ namespace $rootnamespace$
         {
             $fileinputname$ entity = ($fileinputname$)entityObject;
             $fileinputname$ dbEntity = originalEntity as $fileinputname$;
-            AppContext ctx = entity.Context;
+            BlayerContext ctx = entity.Context;
 
             switch (state)
             {

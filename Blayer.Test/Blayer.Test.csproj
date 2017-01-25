@@ -63,6 +63,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Items\TestItemAdditionalSteps.cs" />
+    <Compile Include="Items\TestsConfiguration.cs" />
+    <Compile Include="Items\TestItem.cs" />
+    <Compile Include="Items\TestItemRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CreateTest.cs" />
     <Compile Include="DeleteTest.cs" />
